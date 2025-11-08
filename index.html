@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cartes avec filtres</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="main-container">
+<div id="entete">
+  <span style="font-size: 20px; font-weight: bold;">HSK Go !</span>
+  <span style="margin-left: auto;">
+    <img src="HSKSamy_entete.png" alt="Paramètres" onclick="onRightIconClick()" style="height: 32px;">
+  </span>
+</div>
+
+    <div id="filtres">
+      <label>
+        Niveau :
+        <select id="filtreNiveau" onchange="onNiveauChange()"></select>
+      </label>
+      <label>
+        Leçon :
+        <select id="filtreLecon" onchange="appliquerFiltres()"></select>
+      </label>
+    </div>
+      <label class="switch">
+        <input type="checkbox" id="filtreFavori" onchange="appliquerFiltres()">
+        <span class="slider"></span>
+        <span class="switch-label">Uniquement les favoris</span>
+      </label>
+<div style="display: flex; align-items: center; gap: 20px;">
+  <label class="switch">
+    <input type="checkbox" id="stepMode" onchange="onStepModeChange()">
+    <span class="slider"></span>
+    <span class="switch-label">En 2 temps</span>
+  </label>
+
+  <label class="switch">
+    <input type="checkbox" id="textFirst" onchange="onTextFirstChange()">
+    <span class="slider"></span>
+    <span class="switch-label">(字 / pinyin) </span>
+  </label>
+</div>
+
+    <div style="position: relative; width: 100%; margin: 18px 0 10px 0;">
+  <img id="slideImage" />
+  <div id="hanziDisplay"></div>
+  <div id="leconDisplay" style="text-align: right; margin-top: 8px; font-weight: normal;"></div>
+
+
+  <span id="toggleAffichageIcon" onclick="toggleAffichage()" title="Retourner la carte">🔁</span>
+  <span id="favoriIcon" onclick="toggleFavori()" title="Ajouter aux favoris">☆</span>
+</div>
+
+
+<!-- Texte explicatif (une seule fois !) -->
+<div id="texteHan"></div>
+<div id="texteFr"></div>
+
+    <div class="button-bar">
+      <button onclick="prevSlide()">Précédent</button>
+      <button onclick="nextSlide()">Suivant</button>
+      <button onclick="randomSlide()">Aléatoire</button>
+    </div>
+  </div>
+
+  <div style="text-align: center; font-size: 0.8em; margin-top: 20px; color: #666;">
+    Made by Samy for ICPP
+  </div>
+
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
