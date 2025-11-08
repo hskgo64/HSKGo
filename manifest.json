@@ -1,0 +1,20 @@
+{
+  "name": "HSK Go !",
+  "short_name": "HSKGo",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#fcfcfc",
+  "theme_color": "#006da6",
+  "icons": [
+    {
+      "src": "HSKGo_192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "HSKGo_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
