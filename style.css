@@ -1,5 +1,4 @@
     body { margin: 0; font-family: sans-serif; background: #fcfcfc; font-size: 16px;}
-    #main-container { max-width: 600px; margin: 0 auto; padding: 12px; }
 body {
   font-family: 'Segoe UI', Roboto, sans-serif;
   background: linear-gradient(to bottom, #f9f9f9, #eaeaea);
@@ -43,6 +42,10 @@ select:focus {
 }
 
 #main-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 12px;
+  padding-bottom: 70px; /* espace réservé à la bannière publicitaire */
   border-radius: 12px;
   background: #fff;
   box-shadow: 0 2px 12px rgba(0,0,0,0.05);
